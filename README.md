@@ -3,6 +3,11 @@ I'm releasing this as a standalone library because it's really annoying to find 
 
 This allows you to read a file's contents bit by bit (and effectively read as many as you want at once)
 
+### Use cases
+- You can read integers in both little and big endian and of any bit width with just a single BitReader.read()
+- File formats that store data smaller than a byte don't need any extra decoding/bit shifting logic
+- You can mix BitReader reads with normal Python file I/O reads
+
 ### Usage example
 ```python
 from BitReader import *
