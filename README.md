@@ -9,8 +9,12 @@ with open("TEST.bin", "w+b") as TEST: #Open a file named "TEST.bin" and write a 
     TEST.write(b'These are some bytes')
 
 with open("TEST.bin", "rb") as test: #Open TEST.bin again and print out the bytes
-    testReader = LE_BitReader(test)
+    testReader = LE_BitReader(test) #Open the file in the Bit Reader (endianness doesn't matter for this example)
     for i in range(20):
         data = testReader.read(8) #Read 8 bits at a time, as each character is 8 bits wide
         print(chr(data)) #Display the characters
 ```
+
+This library has both a big endian class (BE_BitReader) and a little endian class (LE_BitReader).
+
+Nobody needs to ask for permission to use this. I released it as a standalone library for convenience.
