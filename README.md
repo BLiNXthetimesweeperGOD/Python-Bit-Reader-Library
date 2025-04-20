@@ -18,3 +18,8 @@ with open("TEST.bin", "rb") as test: #Open TEST.bin again and print out the byte
 This library has both a big endian class (BE_BitReader) and a little endian class (LE_BitReader).
 
 Nobody needs to ask for permission to use this. I released it as a standalone library for convenience.
+
+### External dependencies
+There is none. It doesn't need to have anything extra installed besides Python itself to work.
+
+This was written with Python 3, so I'd recommend using Python 3 with this.
